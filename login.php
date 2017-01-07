@@ -1,22 +1,20 @@
 <?php 
-  $nameErr = $emailErr = $passErr = "";
-  $name = $email = $pass = "";
-  echo "php success";
-  $mysqli=mysqli_connect('localhost', 'root', 'titanic4', 'vacationdb');
-  if (! $mysqli){
-    die('Could not connect:' . mysql_error());
-  }
-  echo "Connected Successfully";
-
-  if(!mysqli_select_db($mysqli, 'vacationdb')){
-    echo "Database not selected";
-  }
-  echo "Selected Successfully";
-  $sql = "SELECT * FROM tbl_users WHERE user_name ='Aditi' AND pwd = 'jjjjj' ";
+  session_start();
+  include "connection.php";
+  $sql = "SELECT user_id FROM tbl_users WHERE user_name = '$_POST[name]' AND pwd = '$_POST[pass]' ";
   
   $return = mysqli_query($mysqli, $sql);
   $numrow = mysqli_num_rows($return);
+  
+  if ($return){
+    while ($row = mysqli_fetch_assoc($return)){
+      printf ($row['user_id']);
+    }
+  }
+  $var=7;
 
+  $_SESSION['userid'] = $var;
+  echo $var;
 
   if(! $return){
     die('Could not enter data: ' . mysqli_error());
@@ -27,3 +25,15 @@
     echo "Login successful";
   mysqli_close($mysqli);
   ?>
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>New Account</title>
+  </head>
+  <body>
+  <form action="book.html">
+    <input type="submit" name="submit" value="plan my trip!">
+  </form>
+  </body>
+  </html>

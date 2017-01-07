@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Booking</title>
+<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="styleform.css">
+</head>
+<body>
+<header>
+<div>
+
+  <a href="index.html">
+    <img class="home" src="images/home.png">
+  </a>
+
+  <a href="athens.html">
+   <img class= "greece" src="images/acropolis.jpg">
+  </a>
+
+  <a href="porto.html">
+   <img class= "portugal" id= "pos_porto" src="images/porto2.jpg">
+  </a>
+
+  <a href="havana.html">
+    <img class="cuba" src="images/havana2.jpg">
+  </a>
+
+  <div>
+    <p class="p4">HOME</p>
+    <p class="p1">NYC</p>
+    <p class="p2">BANFF</p>
+    <p class="p3">MEXICO CITY</p>
+  </div>
+
+</div>
+</header>
+
+  <h1>BOOK YOUR VACATION</h1>
+  <form action="trips.php" method="post">
+
+    <p>Enter Starting City:</p>
+    <input type="textbox" name="start">
+    
+    <p>Choose destination:</p>
+    <label>
+      <select name = "destination">
+        <option>NYC</option>
+        <option>BANFF</option>
+        <option>MEXICO CITY</option>
+      </select>
+    </label>
+
+    <p>Select departure date:</p>
+
+    <p>
+    <label><input type="date" name="departure"></label> </p>
+    
+    <p>Select return date:</p>
+
+    <p>
+    <label><input type="date" name="return"></label> </p>
+    
+    <label><input type="submit" name="Submit Form"></label> 
+  </form>
+
+
+</body>
+
+ <footer>
+  <p>this is a dummy website, it's not real.</p>
+  <p>&copy 2016 Aditi Trivedi</p>
+ </footer>
+</body>
+</html>

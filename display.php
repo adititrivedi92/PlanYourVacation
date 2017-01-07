@@ -1,8 +1,6 @@
 <?php
-
-  $nameErr = $emailErr = $passErr = "";
-  $name = $email = $pass = "";
-  echo "php success";
+  session_start();
+  include "connection.php";
   $mysqli=mysqli_connect('localhost', 'root', 'titanic4', 'vacationdb');
   if (! $mysqli){
     die('Could not connect:' . mysql_error());

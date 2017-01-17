@@ -1,0 +1,41 @@
+body{
+    background-color: #F0993C;
+    background-image: url("images/brick.png");
+    color: white;
+    font-family: 'Fredericka the Great', cursive;
+}
+h1{
+    font-size: 130px;
+}
+
+img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%
+}
+.p1{
+  float: left;
+  padding-left: 60px;
+}
+.p2{
+  float: left;
+  padding-left: 80px;
+}
+.p3{
+  float: left;
+  padding-left: 50px;
+}
+.p4{
+  float: left;
+  padding-left: 5px;
+}
+
+.greece:hover {
+  opacity: 0.5;
+}
+.portugal:hover {
+  opacity: 0.5;
+}
+.cuba:hover {
+  opacity: 0.5;
+}

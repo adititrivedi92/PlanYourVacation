@@ -1,122 +1,38 @@
-body{
-    background-color: #F0993C;
-    background-image: url("images/brick.png");
-    color: white;
+body, html{
+    height: 100%;
+    margin: 0;
 }
-h1{
-    font-family: 'Fredericka the Great', cursive;
-    font-size: 130px;
+.bg{
+    background-image: url(background.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    position: relative;
 }
-
-.main{
-    
-    width: 900px;
-}
-
-.div1{
-    float: left;
-    border-radius: 50%;
-    height: 300px;
-    width: 300px;
-    background-image: url("images/nyc1.jpg");
-}
-.text{
-    padding-left: 50px;
-    font-family: 'Fredericka the Great', cursive; 
-    font-size: 80px;
-    color: white;
-    visibility: hidden;
-    opacity: 0;
-}
-
-.div1:hover .text{
-    visibility: visible;
-    opacity: 1;
-}
-
-.div2{
-    float: left;
-    border-radius: 50%;
-    height: 300px;
-    width: 300px;
-    background-image: url("images/banff.jpg");
-}
-.text2{
-    font-family: 'Fredericka the Great', cursive; 
-    font-size: 80px;
-    color: white;
-    visibility: hidden;
-    opacity: 0;
-}
-
-.div2:hover .text2{
-    visibility: visible;
-    opacity: 1;
-}
-.div3{
-    float: left;
-    border-radius: 50%;
-    height: 300px;
-    width: 300px;
-    background-image: url("images/mexico-city.jpg");
-}
-.text3{
-    padding-left: 100px;
-    font-family: 'Fredericka the Great', cursive; 
+button{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    background: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    height: 100px;
+    width: 440px;
     font-size: 40px;
-    color: white;
-    visibility: hidden;
-    opacity: 0;
+    font-weight: bold;
+}
+.bg:hover{
+    background-image: url(background.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    position: relative;
 }
 
-.div3:hover .text3{
-    visibility: visible;
-    opacity: 1;
-}
-
-#circles {
-   background-color: transparent;
-   border-color: black;
-   border-style: solid;
-   width: 400px;
-   height: 400px;
-   border-radius:50%;
-   position: absolute;
-   z-index: 1;
- }
- #circles2 {
-   background-color: transparent;
-   border-color: black;
-   border-style: solid;
-   width: 400px;
-   height: 400px;
-   position: absolute;
-   z-index: 0;
- }
- #box{
-    float: right;
-    background-color: transparent;
-    border-color: black;
-    border-style: solid;
-    width: 400px;
-    height: 400px;
-    position: relative;
- }
- #box2{
-    margin-top: 100px;
-    margin-bottom: 100px;
-    background-color: transparent;
-    border-color: black;
-    border-style: solid;
-    width: 200px;
-    height: 200px;
-    position: relative;
-    margin-left: 100px;
- }
- #center{
-    margin-left: 600px;
- }
-.end{
-    font-family: 'Fredericka the Great', cursive; 
-    font-size: 100px;
-}

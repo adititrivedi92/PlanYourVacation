@@ -3,84 +3,48 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Booking</title>
-<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+<title>login</title>
 <link rel="stylesheet" type="text/css" href="styleform.css">
+<script type="text/javascript">
+  function checkForm(){
+    var name = document.forms[0].first.value;
+    if (name.length>15){
+      alert("Name is too long");
+      return false;
+    }
+    return true;
+  }
+</script>
 </head>
 <body>
-<header>
-<div>
+<div id="formDiv">
+  <form class="formElement" method="POST" action= "welcome.php" onsubmit="return checkForm()">
+    <section>
+      <label>First Name</label>
+      <input type="text" name="first">
+    </section>
 
-  <a href="index.html">
-    <img class="home" src="images/home.png">
-  </a>
+    <section>
+      <label>Last Name</label>
+      <input type="text" name="last">
+    </section>
 
-  <a href="athens.html">
-   <img class= "greece" src="images/acropolis.jpg">
-  </a>
+    <section>
+      <label>Email</label>
+      <input type="Email" name="email" placeholder="somebody@me.com">
+    </section>
 
-  <a href="porto.html">
-   <img class= "portugal" id= "pos_porto" src="images/porto2.jpg">
-  </a>
+    <section>
+      <label>Password</label>
+      <input type="Password" name="password" placeholder="*****">
+    </section>
 
-  <a href="havana.html">
-    <img class="cuba" src="images/havana2.jpg">
-  </a>
-
-  <div>
-    <p class="p4">HOME</p>
-    <p class="p1">NYC</p>
-    <p class="p2">BANFF</p>
-    <p class="p3">MEXICO CITY</p>
-  </div>
-
+    <input class="submitButton" type="submit" name="submit" alt="Submit" value="Submit">
+    <br>
+    <br>
+    <h3>Already registered?</h3>
+    <input class="loginButton" type="submit" name="login" alt="Login" value="Login">
+</form>
 </div>
-</header>
-
-  <h1>Sign in or Create a New Account!</h1>
-  <form <form method="post" action="newaccount.php"> 
-  <fieldset>
-  <legend>Create New Account</legend>
-  <input type="hidden" name="submitted" id="submitted" value="1">
-
-  <label for="username">Username: </label>
-  <input type="text" name="name">
-
-  <label for="password">Password: </label>
-  <input type="password" name="pass" maxlength="8">
-
-  <label for="email">Email: </label>
-  <input type="text" name="email">
-
-  <input type="submit" name="submit" value="submit">
-  </fieldset>
-  </form>
-
-  <form method = "post" action="login.php">
-    <fieldset>
-    <legend>Login</legend>
-    <input type="hidden" name="submitted" id="submitted" value="1">
-
-    <label for="username">Username: </label>
-    <input type="text" name="name">
-
-    <label for="password">Password: </label>
-    <input type="password" name="pass" maxlength="8">
-
-    <input type="submit" name="submit" value="submit">
-  </fieldset>
-  </form>
-
-  <form action="display.php" method="post">
-    <input type="text" name="test">
-    <input type="submit" name="submit" value="display">
-  </form>
-  
-</body>
-
- <footer>
-  <p>this is a dummy website, it's not real.</p>
-  <p>&copy 2016 Aditi Trivedi</p>
- </footer>
 </body>
 </html>
